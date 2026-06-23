@@ -1,6 +1,6 @@
 context:
   version: "35.1"
-  major: 6
+  major: 7
 
 package:
   name: libprotobuf-bazel-systemlib
