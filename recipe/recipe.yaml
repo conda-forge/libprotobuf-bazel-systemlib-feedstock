@@ -32,7 +32,7 @@ tests:
       build:
         - ${{ compiler('cxx') }}
         - bazel >=8
-        - bazel-toolchain >=0.5.7
+        - bazel-toolchain >=0.5.11
       run:
         - protobuf-bazel-rules
         - protobuf ${{ major }}.${{ version }}.*
