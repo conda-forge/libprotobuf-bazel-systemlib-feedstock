@@ -1,6 +1,6 @@
 context:
-  version: "33.5"
-  major: 6
+  version: "35.1"
+  major: 7
 
 package:
   name: libprotobuf-bazel-systemlib
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/protocolbuffers/protobuf/releases/download/v${{ version }}/protobuf-${{ version }}.tar.gz
-  sha256: c6c7c27fadc19d40ab2eaa23ff35debfe01f6494a8345559b9bb285ce4144dd1
+  sha256: f0b6838e7522a8da96126d487068c959bc624926368f3024ac8fd03abd0a1ac4
 
 build:
   number: 0
@@ -32,7 +32,7 @@ tests:
       build:
         - ${{ compiler('cxx') }}
         - bazel >=8
-        - bazel-toolchain >=0.5.7
+        - bazel-toolchain >=0.5.11
       run:
         - protobuf-bazel-rules
         - protobuf ${{ major }}.${{ version }}.*
